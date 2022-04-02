@@ -20,7 +20,10 @@ Your goal in this project is to create a robust regression model, that will use 
 - [Feature Engineering](#feature-engineering)
 - [Data Modeling](#data-modeling)
 - [Results Evaluation](#results-evaluation)
+- [Limitation of the model](#limitation-of-the-model)
   
+  
+ 
 </small></p>
 
 ## Understanding the Business
@@ -51,6 +54,8 @@ The data set consist of:
 ### Univariate Analysis
 For this analysis, the seaborn library was used for creation of count plots for each categorical variable. These charts are expected to give picture of the number of transaction per category in every analyzed variable.
 
+![Univariate Analisys 1](https://user-images.githubusercontent.com/79594181/161399502-97c7d487-50e5-4d2c-8bb8-a7201c08e07f.png)
+
 Insights:
 1. In figure 1, The most transactions are performed by the customers in the range of 26–35 age 
 2. In figure 2, Male customers executed more transactions than females.
@@ -62,7 +67,7 @@ Insights:
 However, at this point, final conclusions in this respect cannot be made, but further analysis will be performed.
 
 ### Bivariate Analysis
-Bivariate Analysis relates to analysis of two variables, for the purpose of determining the empirical relationship between them. In our case, the relationship between each categorical variable and the Purchase variable will be analyzed. 
+Bivariate Analysis relates to analysis of two variables, for the purpose of determining the empirical relationship between them. In our case, the relationship between each categorical variable and the target variable (Purchase) will be analyzed. 
 
 Insights:
 1. In figure 1, The most money was spent by customers aged 26 to 35 years.
@@ -72,18 +77,33 @@ Insights:
 5. In figure 5, Customers from city category B spent the most.
 6. In figure 6, Customers who are single, spent more money than married customers.
 
-If the insights from both analysis (univariate and bivariate) are compared, can be conclude that the same results were received. The reason behind this is the disbalance of the categories in each of the analyzed features. 
+If the insights from both analysis (univariate and bivariate) are compared, can be concluded that the same results were received. The reason behind this is the disbalance of the categories in each of the analyzed features. 
 
-Consequently, the bivariate analysis will be supplemented with analysis of the relationship between the average of each categorical feature and the Purchase feature.
+Consequently, the bivariate analysis will be supplemented with analysis of the relationship between the average of each categorical feature and the target variable.
+
+![Bivariate mean analysis](https://user-images.githubusercontent.com/79594181/161397994-70e9410a-97f6-4387-b210-2ebb93f84c2c.png)
+
 
 As it was assumed, this analysis shows that there is no significant correlation between each category within a feature and the Purchase. With other words, the presented correlation in the previous visualization was driven by the misbalanced set of data. 
+
+### Multivariate Analysis
+
+![Multivariate analysis_2](https://user-images.githubusercontent.com/79594181/161398008-9cab2357-6494-4abd-9de3-259ca5245991.png)
+
 
 ### Target variable distribution and outliers
 
 In this section the scipy library was used for plotting the distribution of the target variable.
 
-•	From distribution plot that represent the distribution of Purchase, we can conclude that our target variable follows Gaussian (Norma) distribution.
+![Target variable distribution](https://user-images.githubusercontent.com/79594181/161398029-0e7a30a6-6a6b-42b3-a2a6-d8dddfd4b6c4.png)
+
+![Target variable  and outliers](https://user-images.githubusercontent.com/79594181/161398038-864aaece-6ac0-4cf8-934b-d06c0291849e.png)
+
+
+•	From the distribution plot, which represent the distribution of the target varibale (Pruchase), can be concluded that the target variable follows the Gaussian (Norma) distribution.
+
 •	From the boxplot, can be seen that there are few values lying outside (outliers). But if the z-score is considered, can be concluded that there are no values above the usual threshold level (generally taken as 3).
+
 • From the distribution plot that represents the distribution of each Product_Category_1, can be concluded that the target variable follows Gaussian(normal) distribution within each Product_Category_1
 
 
@@ -101,9 +121,9 @@ o	Custom fill in.
 
 However, best results were received with the custom function for filling in the missing values, which includes: 
 
-•	**For Product_category_3:** for all the combinations of values of Product_category_1 and Product_category_2, the most frequent Product_category_3 was found and it was used for filling in the missing values in Product_category_3 for the appropriate combination of the first two categories. For all the missing values in Product_category_3 for which also the Product_category_2 is empty, zero was used for filling in.
+•	**For Product_category_3:** for all the combinations of values of Product_category_1 and Product_category_2, the most frequent Product_category_3 was found and it was used for filling in the missing values in Product_category_3, for the appropriate combination of the first two categories. For all the missing values in Product_category_3, for which also the Product_category_2 is empty, zero was used for filling in.
 
-  _For example,_ when Product_Category_1 is 3 and Product_Category_2 is 4, the Product_Category_3 occurs as 5, 12, 9 and 8, but the most frequent is 5. This means, that every time when Product_Category_1 is 3, Product_Category_2 is 4 and the value of Product_Category_3 is missing, it will be filled in with 5. 
+  _For example,_ when Product_Category_1 is 3 and Product_Category_2 is 4, the Product_Category_3 occurs as 5, 12, 9 and 8, but the most frequent is 5. This means that every time when Product_Category_1 is 3, Product_Category_2 is 4, and the value of Product_Category_3 is missing, it will be filled in with 5. 
 
 •	**For Product_category_2:** missing values were filled in with 0.
 
@@ -119,17 +139,19 @@ However, best results were received with the custom function for filling in the 
 
      **Product_popularity_score**- it counts the number of transaction per product, and then scales the values with MinMaxScaler. 
 
-- In regards to ****label encoding of the categorical features****, different strategies were used, but no improvements of the model were reached. Thus, it was decided to use label encoding, because that way the model training was the fastest.
+- In regards to ****label encoding of the categorical features****, different strategies were used, but no improvements of the model were reached. Thus, it was decided the label encoding to be used, because that way, the model training was the fastest.
 
 - After the performed feature engineering, the correlation between each feature and the target variable is presented on a **Correlation matrix**, with using the seaborn heatmap.
 
-From the visualization it can be easily concluded what in fact through the previous analysis was proved, that there is a very low correlation between all the features and the target variable except Product_category_1, Product_category_2, Product_category_3 and the new features Category_count and Product_popularity_score. 
+![Corr_matrix](https://user-images.githubusercontent.com/79594181/161398092-8239e628-331c-48be-a1d5-03ffdcbe322f.png)
+
+From the visualization, it can easily be concluded, what in fact through the previous analysis was proved, that there is a very low correlation between all the features and the target variable, except for Product_category_1, Product_category_2, Product_category_3 and the new features, Category_count and Product_popularity_score. 
 
 The 2 newly developed features appear with high correlation with the target variable, which justifies their existence in the model.
 
 ## Data Modeling
 
-•	The obtained data set was divided into a train and test data set in a ratio of 70/30.
+•	The obtained data set was divided into train and test data set, in a ratio of 70/30.
 
 •	 For the data modeling, different algorithms with default parameters were used: Dummy regressor, Linear regressor, Lasso regressor, KNN regressor, Random forest regressor and XGB. 
 
@@ -141,12 +163,17 @@ The 2 newly developed features appear with high correlation with the target vari
 
 ## Results Evaluation
 
-•	The column 'Purchase_pred' was merged to the original data in order actual vs predicted values to be analyzed.
+•	The column 'Purchase_pred' was merged to the original data in order the actual vs predicted values to be analyzed.
 
-• As expected, according to the model precision that was reached (0,73%), the distribution of actual vs predicted Purchase are partially overlapped. But the good thing is that the predicted distribution matches picks of the actual distribution.
+• As expected, according to the model precision that was reached (0,73), the distribution of actual vs predicted Purchase are partially overlapped. But the good thing is that the predicted distribution matches the picks of the actual distribution.
 
 • Similarly, same match of the picks is visible on the plots with the separated Product_Category_1 prediction, except for the subcategories with less data.
 
+## Limitation of the model
+
+For development of the model, only data from the month before Black Friday was provided. However, it is considered that it would be more relevant if the model was trained with historical data from the previous years’ Black Fridays. Оne of the reasons for the previous is the fact that usually, buyers in the period before Black Friday refrain from buying products for which they expect promotions during Black Friday.
+
+Additionally, the analysis showed that the correlation between the demographic features of the clients and the target variable is very low. On the other hand, their product category preferences had high correlation with the target variable. Consequently, the used data set (only from one month) had limited learning possibilities. 
 
 
 
