@@ -17,6 +17,7 @@ Your goal in this project is to create a robust regression model, that will use 
 - [Understanding the Data](#understanding-the-data)
 - [Exploratory Data Analysis](#exploratory-data-analysis)
 - [Data Preparation](#data-preparation)
+- [Feature Engineering](#feature-engineering)
 - [Data Modeling](#data-modeling)
 - [Results Evaluation](#results-evaluation)
   
@@ -102,10 +103,50 @@ However, best results were received with the custom function for filling in the 
 
 •	**For Product_category_3:** for all the combinations of values of Product_category_1 and Product_category_2, the most frequent Product_category_3 was found and it was used for filling in the missing values in Product_category_3 for the appropriate combination of the first two categories. For all the missing values in Product_category_3 for which also the Product_category_2 is empty, zero was used for filling in.
 
+  _For example,_ when Product_Category_1 is 3 and Product_Category_2 is 4, the Product_Category_3 occurs as 5, 12, 9 and 8, but the most frequent is 5. This means, that every time when Product_Category_1 is 3, Product_Category_2 is 4 and the value of Product_Category_3 is missing, it will be filled in with 5. 
+
 •	**For Product_category_2:** missing values were filled in with 0.
 
+## Feature Engineering
+
+- From the previous analysis, it was concluded that there is a very weak correlation between each feature and the target variable, except for the Product_Category_1 feature.
+
+    As a result, it was decided, new features to be created, in order to increase the correlation, thus to increase the probability score of the prediction model     which will be developed. 
+
+    The following **2 new features were created**:
+
+     **Category_Count**-  it counts the number of categories (Product_Category_1, Product_Category_2 and Product_Category_3) to which each product belongs.
+
+     **Product_popularity_score**- it counts the number of transaction per product, and then scales the values with MinMaxScaler. 
+
+- In regards to ****label encoding of the categorical features****, different strategies were used, but no improvements of the model were reached. Thus, it was decided to use label encoding, because that way the model training was the fastest.
+
+- After the performed feature engineering, the correlation between each feature and the target variable is presented on a **Correlation matrix**, with using the seaborn heatmap.
+
+From the visualization it can be easily concluded what in fact through the previous analysis was proved, that there is a very low correlation between all the features and the target variable except Product_category_1, Product_category_2, Product_category_3 and the new features Category_count and Product_popularity_score. 
+
+The 2 newly developed features appear with high correlation with the target variable, which justifies their existence in the model.
+
 ## Data Modeling
+
+•	The obtained data set was divided into a train and test data set in a ratio of 70/30.
+
+•	 For the data modeling, different algorithms with default parameters were used: Dummy regressor, Linear regressor, Lasso regressor, KNN regressor, Random forest regressor and XGB. 
+
+•	Best results were reached with the XGB regressor, so this algorithm was selected for further development with HyperParameter Tuning.
+
+•	Also, the kFold strategy and train dataset on 5 folds were used, in order to be sure that each segment of the data is trained equally, because the predicted target column will be used in the final analysis
+
+•	The tuned XGB algorithm gives the best results, with accuracy of 0,73.
+
 ## Results Evaluation
+
+•	The column 'Purchase_pred' was merged to the original data in order actual vs predicted values to be analyzed.
+
+• As expected, according to the model precision that was reached (0,73%), the distribution of actual vs predicted Purchase are partially overlapped. But the good thing is that the predicted distribution matches picks of the actual distribution.
+
+• Similarly, same match of the picks is visible on the plots with the separated Product_Category_1 prediction, except for the subcategories with less data.
+
 
 
 
