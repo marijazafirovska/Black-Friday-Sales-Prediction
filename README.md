@@ -43,11 +43,13 @@ The data set consist of:
   -   5.891 unique customers
   -   3.631 unique products. 
   -   7 numeric and 5 object features 
-Missing values were identified in two columns, Product_category_2 (173.638 or 31%) and Product_category_3 (383.247 or 69%). The missing values will be filled in the Data Preprocessing part. 
+  
+**Missing values** were identified in two columns, **Product_category_2** (173.638 or 31%) and **Product_category_3** (383.247 or 69%). The missing values will be filled in the Data Preprocessing part. 
 
 ## Exploratory Data Analysis
 ### Univariate Analysis
 For this analysis, the seaborn library was used for creation of count plots for each categorical variable. These charts are expected to give picture of the number of transaction per category in every analyzed variable.
+
 Insights:
 1. In figure 1, The most transactions are performed by the customers in the range of 26–35 age 
 2. In figure 2, Male customers executed more transactions than females.
@@ -75,7 +77,33 @@ Consequently, the bivariate analysis will be supplemented with analysis of the r
 
 As it was assumed, this analysis shows that there is no significant correlation between each category within a feature and the Purchase. With other words, the presented correlation in the previous visualization was driven by the misbalanced set of data. 
 
+### Target variable distribution and outliers
+
+In this section the scipy library was used for plotting the distribution of the target variable.
+
+•	From distribution plot that represent the distribution of Purchase, we can conclude that our target variable follows Gaussian (Norma) distribution.
+•	From the boxplot, can be seen that there are few values lying outside (outliers). But if the z-score is considered, can be concluded that there are no values above the usual threshold level (generally taken as 3).
+• From the distribution plot that represents the distribution of each Product_Category_1, can be concluded that the target variable follows Gaussian(normal) distribution within each Product_Category_1
+
+
 ## Data Preparation
+
+### Fill in missing values
+
+As it was previously presented, there are 2 variables with missing values. In this regards, different strategies were tested:
+
+o	Fill in with mean value.
+
+o	Fill in with 0.
+
+o	Custom fill in.
+
+However, best results were received with the custom function for filling in the missing values, which includes: 
+
+•	**For Product_category_3:** for all the combinations of values of Product_category_1 and Product_category_2, the most frequent Product_category_3 was found and it was used for filling in the missing values in Product_category_3 for the appropriate combination of the first two categories. For all the missing values in Product_category_3 for which also the Product_category_2 is empty, zero was used for filling in.
+
+•	**For Product_category_2:** missing values were filled in with 0.
+
 ## Data Modeling
 ## Results Evaluation
 
