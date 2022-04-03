@@ -1,5 +1,7 @@
 # Black-Friday-Sales-Prediction
 
+![resize](https://user-images.githubusercontent.com/79594181/161444729-63ba574f-c16f-437b-b45b-f83e7fe7a456.jpg)
+
 <h3>Project description</h3>
 
 A retail company wants to understand the customer purchase behavior (specifically, purchase amount) against various products of different categories.
@@ -69,6 +71,8 @@ However, at this point, final conclusions in this respect cannot be made, but fu
 ### Bivariate Analysis
 Bivariate Analysis relates to analysis of two variables, for the purpose of determining the empirical relationship between them. In our case, the relationship between each categorical variable and the target variable (Purchase) will be analyzed. 
 
+![Bivariate Analisys](https://user-images.githubusercontent.com/79594181/161443739-138079d8-da9f-4b63-bc95-d163e5754b61.png)
+
 Insights:
 1. In figure 1, The most money was spent by customers aged 26 to 35 years.
 2. In figure 2, Male customers spent more money than females.
@@ -90,6 +94,7 @@ As it was assumed, this analysis shows that there is no significant correlation 
 
 ![Multivariate analysis_2](https://user-images.githubusercontent.com/79594181/161398008-9cab2357-6494-4abd-9de3-259ca5245991.png)
 
+•	From this analysis it is evident lower purchase amount for age group 0-17 females in the City_Category A, age group 46-50 male in City_Category A and age group +55 males in City Category A, so the company can make some special promotions for this categories in order to increase the sales if this is in line with their sales stragegy.
 
 ### Target variable distribution and outliers
 
