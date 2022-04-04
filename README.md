@@ -170,7 +170,9 @@ The 2 newly developed features appear with high correlation with the target vari
 
 •	The column 'Purchase_pred' was merged to the original data in order the actual vs predicted values to be analyzed.
 
-• As expected, according to the model precision that was reached (0,73), the distribution of actual vs predicted Purchase are partially overlapped. But the good thing is that the predicted distribution matches the picks of the actual distribution.
+![download](https://user-images.githubusercontent.com/79594181/161519456-79e87011-7957-4f28-9887-7decf6705f76.png)
+
+• As expected, according to the model precision that was reached (R2 score 0,73), the distribution of actual vs predicted Purchase are partially overlapped. But the good thing is that the predicted distribution matches the picks of the actual distribution.
 
 • Similarly, same match of the picks is visible on the plots with the separated Product_Category_1 prediction, except for the subcategories with less data.
 
