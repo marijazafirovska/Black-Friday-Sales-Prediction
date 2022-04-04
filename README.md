@@ -148,7 +148,7 @@ However, best results were received with the custom function for filling in the 
 
 - After the performed feature engineering, the correlation between each feature and the target variable is presented on a **Correlation matrix**, with using the seaborn heatmap.
 
-![Corr_matrix](https://user-images.githubusercontent.com/79594181/161398092-8239e628-331c-48be-a1d5-03ffdcbe322f.png)
+![CorrMatrix_1](https://user-images.githubusercontent.com/79594181/161599921-e6223903-524e-4f0b-b5a2-ed02deef1d44.png)
 
 From the visualization, it can easily be concluded, what in fact through the previous analysis was proved, that there is a very low correlation between all the features and the target variable, except for Product_category_1, Product_category_2, Product_category_3 and the new features, Category_count and Product_popularity_score. 
 
@@ -168,25 +168,35 @@ The 2 newly developed features appear with high correlation with the target vari
 
 ## Results Evaluation
 
-•	The column 'Purchase_pred' was merged to the original data in order the actual vs predicted values to be analyzed.
+ 1. In the table below, the progress towards the final model is presented. 
 
-![download](https://user-images.githubusercontent.com/79594181/161519456-79e87011-7957-4f28-9887-7decf6705f76.png)
+- First model, simple imputing of all missing values with zero, R2 score = 0.646. 
+- Second model, custom filling in of missing values, R2_score = 0.647. 
+- Third model, new feature "Column_Count" developed, R2_score = 0.65. 
+- Fourth model, second feature "Popularity_Score" developed, R2 score = 0.67. 
+- Fifth and final, the model was tuned with best parameters and the final R2 score = 0.73
 
-• As expected, according to the model precision that was reached (R2 score 0,73), the distribution of actual vs predicted Purchase are partially overlapped. But the good thing is that the predicted distribution matches the picks of the actual distribution.
+ ![Model_XGB_history](https://user-images.githubusercontent.com/79594181/161600726-e43a6d6c-4df3-40c7-a05d-ebc4b0cef1ce.PNG)
+ 
+ 2.  Regarding the evaluation of the results of the final model, the column 'Purchase_pred' was merged to the original data in order the actual vs predicted values to be analyzed.
 
-• Similarly, same match of the picks is visible on the plots with the separated Product_Category_1 prediction, except for the subcategories with less data.
+![Predicted vs actual](https://user-images.githubusercontent.com/79594181/161600010-a2a574ae-9285-445c-bc80-aa01c1a3e50c.png)
 
-• Additionally, an online research was conducted in order to collect different ideas and to compare the results from the previously presented model. The research outcomes showed that none of the online found models treating the same issue, reached better results (1. **R2 score 0.66**, 2.**MAE score 2188**, 3. **RMSE score 2879.**, 4. **RMSE score  2739**, 5. **R2 score 0.68**) . 
+   - As expected, according to the model precision that was reached (R2 score 0,73), the distribution of actual vs predicted Purchase are partially overlapped. But the good thing is that the predicted distribution matches the picks of the actual distribution.
 
-1. https://github.com/nanthasnk/Black-Friday-Sales-Prediction/blob/master/Black%20Friday%20Sales%20Prediction.ipynb
+  - Similarly, same match of the picks is visible on the plots with the separated Product_Category_1 prediction, except for the subcategories with less data.
 
-2. https://www.kaggle.com/code/ishanvardhan/black-friday-sales-analysis-and-prediction/notebook
+3. Additionally, an online research was conducted in order to collect different ideas and to compare the results from the previously presented model. The research outcomes showed that none of the online found models treating the same issue, reached better results (i. **R2 score 0.66**, ii. **MAE score 2188**, iii. **RMSE score 2879**, iv. **RMSE score  2739**, v. **R2 score 0.68**). 
 
-3. https://github.com/nanthasnk/Black-Friday-Sales-Prediction
+    1. https://github.com/nanthasnk/Black-Friday-Sales-Prediction/blob/master/Black%20Friday%20Sales%20Prediction.ipynb
 
-4. https://medium.com/analytics-vidhya/sales-prediction-on-black-friday-using-ml-regression-technique-380af62c181e
+    2. https://www.kaggle.com/code/ishanvardhan/black-friday-sales-analysis-and-prediction/notebook
 
-5. https://github.com/EagleDangar/BlackFriday-prediction/blob/master/blackfriday-insights-and-prediction.ipynb
+    3. https://github.com/nanthasnk/Black-Friday-Sales-Prediction
+
+    4. https://medium.com/analytics-vidhya/sales-prediction-on-black-friday-using-ml-regression-technique-380af62c181e
+
+    5. https://github.com/EagleDangar/BlackFriday-prediction/blob/master/blackfriday-insights-and-prediction.ipynb
 
 
 ## Limitation of the model
