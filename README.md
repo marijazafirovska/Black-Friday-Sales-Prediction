@@ -176,22 +176,17 @@ The 2 newly developed features appear with high correlation with the target vari
 
 • Similarly, same match of the picks is visible on the plots with the separated Product_Category_1 prediction, except for the subcategories with less data.
 
-• Additionally, an online research was conducted in order to collect different ideas and to compare the results from the previously presented model. The research outcomes showed that none of the online found models treating the same issue, reached better results. 
+• Additionally, an online research was conducted in order to collect different ideas and to compare the results from the previously presented model. The research outcomes showed that none of the online found models treating the same issue, reached better results (1. **R2 score 0.66**, 2.**MAE score 2188**, 3. **RMSE score 2879.**, 4. **RMSE score  2739**, 5. **R2 score 0.68**) . 
 
-https://github.com/nanthasnk/Black-Friday-Sales-Prediction/blob/master/Black%20Friday%20Sales%20Prediction.ipynb
-**R2 score 0.66**
+1. https://github.com/nanthasnk/Black-Friday-Sales-Prediction/blob/master/Black%20Friday%20Sales%20Prediction.ipynb
 
-https://www.kaggle.com/code/ishanvardhan/black-friday-sales-analysis-and-prediction/notebook
-**MAE score 2188**
+2. https://www.kaggle.com/code/ishanvardhan/black-friday-sales-analysis-and-prediction/notebook
 
-https://github.com/nanthasnk/Black-Friday-Sales-Prediction
-**RMSE score 2879.**
+3. https://github.com/nanthasnk/Black-Friday-Sales-Prediction
 
-https://medium.com/analytics-vidhya/sales-prediction-on-black-friday-using-ml-regression-technique-380af62c181e
-**RMSE score  2739**.
+4. https://medium.com/analytics-vidhya/sales-prediction-on-black-friday-using-ml-regression-technique-380af62c181e
 
-https://github.com/EagleDangar/BlackFriday-prediction/blob/master/blackfriday-insights-and-prediction.ipynb
-**R2 score 0.68**
+5. https://github.com/EagleDangar/BlackFriday-prediction/blob/master/blackfriday-insights-and-prediction.ipynb
 
 
 ## Limitation of the model
