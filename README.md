@@ -164,7 +164,7 @@ The 2 newly developed features appear with high correlation with the target vari
 
 •	Also, the kFold strategy and train dataset on 5 folds were used, in order to be sure that each segment of the data is trained equally, because the predicted target column will be used in the final analysis
 
-•	The tuned XGB algorithm gives the best results, with R2 score of 0,73.
+•	The tuned XGB algorithm gives the best results, with R2 score of 0,73, MAE 2.000 and RMSE 2.664.
 
 ## Results Evaluation
 
@@ -173,6 +173,24 @@ The 2 newly developed features appear with high correlation with the target vari
 • As expected, according to the model precision that was reached (0,73), the distribution of actual vs predicted Purchase are partially overlapped. But the good thing is that the predicted distribution matches the picks of the actual distribution.
 
 • Similarly, same match of the picks is visible on the plots with the separated Product_Category_1 prediction, except for the subcategories with less data.
+
+• Additionally, an online research was conducted in order to collect different ideas and to compare the results from the previously presented model. The research outcomes showed that none of the online found models treating the same issue, reached better results. 
+
+https://github.com/nanthasnk/Black-Friday-Sales-Prediction/blob/master/Black%20Friday%20Sales%20Prediction.ipynb
+**R2 score 0.66**
+
+https://www.kaggle.com/code/ishanvardhan/black-friday-sales-analysis-and-prediction/notebook
+**MAE score 2188**
+
+https://github.com/nanthasnk/Black-Friday-Sales-Prediction
+**RMSE score 2879.**
+
+https://medium.com/analytics-vidhya/sales-prediction-on-black-friday-using-ml-regression-technique-380af62c181e
+**RMSE score  2739**.
+
+https://github.com/EagleDangar/BlackFriday-prediction/blob/master/blackfriday-insights-and-prediction.ipynb
+**R2 score 0.68**
+
 
 ## Limitation of the model
 
