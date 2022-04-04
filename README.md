@@ -164,7 +164,7 @@ The 2 newly developed features appear with high correlation with the target vari
 
 •	Also, the kFold strategy and train dataset on 5 folds were used, in order to be sure that each segment of the data is trained equally, because the predicted target column will be used in the final analysis
 
-•	The tuned XGB algorithm gives the best results, with accuracy of 0,73.
+•	The tuned XGB algorithm gives the best results, with R2 score of 0,73.
 
 ## Results Evaluation
 
