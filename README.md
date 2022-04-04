@@ -45,10 +45,10 @@ As a result of the previous, can be concluded how important is for retailers to 
 
 ## Understanding the Data
 The data set consist of:
-  - 550.068 records (rows)
-  -   5.891 unique customers
+  - 550.068 records (rows).
+  -   5.891 unique customers.
   -   3.631 unique products. 
-  -   7 numeric and 5 categorical features 
+  -   7 numeric and 5 categorical features.
   
 **Missing values** were identified in two columns, **Product_category_2** (173.638 or 31%) and **Product_category_3** (383.247 or 69%). The missing values will be filled in the Data Preprocessing part. 
 
@@ -59,7 +59,7 @@ For this analysis, the seaborn library was used for creation of count plots for 
 ![Univariate Analisys 1](https://user-images.githubusercontent.com/79594181/161399502-97c7d487-50e5-4d2c-8bb8-a7201c08e07f.png)
 
 Insights:
-1. In figure 1, The most transactions are performed by the customers in the range of 26–35 age 
+1. In figure 1, The most transactions are performed by the customers in the range of 26–35 age. 
 2. In figure 2, Male customers executed more transactions than females.
 3. In figure 3, Customers with occupations 0 and 4 performed the most transactions.
 4. In figure 4, Custumers who stayed in the current city for 1 year, performed the highest number of transactions.
@@ -98,7 +98,7 @@ As it was assumed, this analysis shows that there is no significant correlation 
 
 ### Target variable distribution and outliers
 
-In this section the scipy library was used for plotting the distribution of the target variable.
+In this section, the scipy library was used for plotting the distribution of the target variable.
 
 ![Target variable distribution](https://user-images.githubusercontent.com/79594181/161398029-0e7a30a6-6a6b-42b3-a2a6-d8dddfd4b6c4.png)
 
@@ -109,7 +109,7 @@ In this section the scipy library was used for plotting the distribution of the 
 
 •	From the boxplot, can be seen that there are few values lying outside (outliers). But if the z-score is considered, can be concluded that there are no values above the usual threshold level (generally taken as 3).
 
-• From the distribution plot that represents the distribution of each Product_Category_1, can be concluded that the target variable follows Gaussian(normal) distribution within each Product_Category_1
+• From the distribution plot that represents the distribution of each Product_Category_1, can be concluded that the target variable follows Gaussian(normal) distribution within each Product_Category_1.
 
 
 ## Data Preparation
@@ -164,7 +164,7 @@ The 2 newly developed features appear with high correlation with the target vari
 
 •	Also, the kFold strategy and train dataset on 5 folds were used, in order to be sure that each segment of the data is trained equally, because the predicted target column will be used in the final analysis
 
-•	The tuned XGB algorithm gives the best results, with R2 score of 0,73, MAE 2.000 and RMSE 2.664.
+•	The tuned XGB algorithm gives the best results, with R2 score of 0.73, MAE 2.000 and RMSE 2.664.
 
 ## Results Evaluation
 
@@ -186,7 +186,7 @@ The 2 newly developed features appear with high correlation with the target vari
 
   - Similarly, same match of the picks is visible on the plots with the separated Product_Category_1 prediction, except for the subcategories with less data.
 
-3. Additionally, an online research was conducted in order to collect different ideas and to compare the results from the previously presented model. The research outcomes showed that none of the online found models treating the same issue, reached better results (i. **R2 score 0.66**, ii. **MAE score 2188**, iii. **RMSE score 2879**, iv. **RMSE score  2739**, v. **R2 score 0.68**). 
+3. Additionally, an online research was conducted in order to collect different ideas and to compare the results from the previously presented model. The research outcomes showed that none of the online found models treating the same issue, reached better results than the final model with R2 score of 0.73, MAE 2.000 and RMSE 2.664 (i. **R2 score 0.66**, ii. **MAE score 2188**, iii. **RMSE score 2879**, iv. **RMSE score  2739**, v. **R2 score 0.68**). 
 
     1. https://github.com/nanthasnk/Black-Friday-Sales-Prediction/blob/master/Black%20Friday%20Sales%20Prediction.ipynb
 
