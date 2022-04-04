@@ -9,7 +9,7 @@ They have shared a purchase summary of various customers for selected high volum
 
 The data set also contains customer demographics (age, gender, marital status, city type, stay in_current_city), product details (product_id and product category) and Total purchase_amount from last month. 
 
-<i>Now, they want to build a model to predict the purchase amount of customer against various products which will help them to create personalized offer for customers against different products <i>.
+<i>Now, they want to build a model to predict the purchase amount of customer against various products which will help them to create personalized offer for customers against different products </i>.
   
 Your goal in this project is to create a robust regression model, that will use this data to predict the customers' total purchase amount for different products. 
   
@@ -29,7 +29,7 @@ Your goal in this project is to create a robust regression model, that will use 
 </small></p>
 
 ## Understanding the Business
-<p>
+
 The first Friday after Thanksgiving has been considered as the beginning of the Christmas shopping season in the USA since 1952. 
 There are few theories how this day received its name. According to one of them, in the 1950s, many manages of companies started to call the first Friday after Thanksgiving as Black Friday due to reported sick leave from many of their workers on this day.
 Years later, Black Friday was used by Philadelphia cops to describe the day after Thanksgiving because they had to work extended hours in terrible traffic. 
@@ -41,14 +41,14 @@ However, in the last years the classic Black Friday has been replaced by the Cyb
 Retailers develop their Black Friday sales plans and strategies entire year. They use different strategies, but mostly they offer low prices for overstock inventory and different discounts on seasonal products.
 Additionally, high discounts for expensive brands of TVs, smart devices, and other electronics are offered. Also, special attention is paid on the Black Friday advertisements content, directed towards driving highest sales.
 As a result of the previous, can be concluded how important is for retailers to have excellent knowledge of their costumer’s behavior, and accordingly, to implement the best marketing strategies for each customer segment.
-</p>
+
 
 ## Understanding the Data
 The data set consist of:
   - 550.068 records (rows)
   -   5.891 unique customers
   -   3.631 unique products. 
-  -   7 numeric and 5 object features 
+  -   7 numeric and 5 categorical features 
   
 **Missing values** were identified in two columns, **Product_category_2** (173.638 or 31%) and **Product_category_3** (383.247 or 69%). The missing values will be filled in the Data Preprocessing part. 
 
