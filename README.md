@@ -191,11 +191,11 @@ The 2 newly developed features appear with high correlation with the target vari
        
 4. Moreover, academic research papers were considered. From the visualizations, can be concluded that the same data set as the one used in this project was used, but we are not completely sure in that. Accordingly, it should be considered in the comparison of the results.
 
-According to the **first article** (Trung, Thien Luu and Huynh, 2019), implementation of **extreme gradient boosted trees algorithm**, further improved by a proper combination of model hyper parameters tuning and feature engineering was proposed. The best result in terms of **RMSE** received with their algorithm is **2405**.
+- According to the **first article** (Trung, Thien Luu and Huynh, 2019), implementation of **extreme gradient boosted trees algorithm**, further improved by a     proper combination of model hyper parameters tuning and feature engineering was proposed. The best result in terms of **RMSE** received with their algorithm is **2405**.
 
-**Reddy and Srayani** (2020) in their paper proposed **Random Forest regressor algorithm**, with which they reached minimum **RMSE** (Root Mean Squared Error) value of **2829** on their Black Friday sales dataset.
+- **Reddy and Srayani** (2020) in their paper proposed **Random Forest regressor algorithm**, with which they reached minimum **RMSE** (Root Mean Squared Error) value of **2829** on their Black Friday sales dataset.
 
-Simiary to the previous study, **Aher, Rjeswari and Vispute** (2021) in their research paper tested the following models, Linear Regression, Lasso Regression, Ridge Regression, Decision Tree Regressor, and Random Forest Regressor, but the best results were reached with **Random Forest Regressor**. The evaluation measure used is Mean Squared Error (**MSE**), and it is **3063**.
+- Simiary to the previous study, **Aher, Rjeswari and Vispute** (2021) in their research paper tested the following models, Linear Regression, Lasso Regression, Ridge Regression, Decision Tree Regressor, and Random Forest Regressor, but the best results were reached with **Random Forest Regressor**. The evaluation measure used is Mean Squared Error (**MSE**), and it is **3063**.
 
       
 ## Limitation of the model
