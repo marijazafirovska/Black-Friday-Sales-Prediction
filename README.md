@@ -166,7 +166,7 @@ The 2 newly developed features appear with high correlation with the target vari
 
 •	The tuned XGB algorithm gives the best results, with R2 score of 0.73, MAE 2.000 and RMSE 2.664.
 
-For more visualization and relationships between the features read our file Explainer Dashboard.
+For more visualization and relationships between the features read our file Explainer Dashboard https://github.com/marijazafirovska/Black-Friday-Sales-Prediction/tree/main/Explainer%20Dashboard
 
 ## Results Evaluation
 
