@@ -186,7 +186,7 @@ The 2 newly developed features appear with high correlation with the target vari
 
   - Similarly, same match of the picks is visible on the plots with the separated Product_Category_1 prediction, except for the subcategories with less data.
 
-3. Additionally, an online research was conducted (Github, Kaggle and Medium) in order to collect different ideas and to compare the results from the previously presented model. The research outcomes showed that none of the online found models treating the same issue, reached better results than the above presented final model with R2 score of 0.73, MAE 1.932 and RMSE 2.599 ( **R2 score 0.66** (1.), **MAE score 2188** (2), **RMSE score 2879** (3), **RMSE score  2739** (4), **R2 score 0.68** (5)), which strongly indicates on more advanced feature engineering and model tuning. 
+3. Additionally, an online research was conducted (Github, Kaggle and Medium) in order to collect different ideas and to compare the results from the previously presented model. The research outcomes showed that none of the online found models treating the same issue, reached better results than the above presented model with best achieved R2 score of 0.73, MAE 1.932 and RMSE 2.599 ( **R2 score 0.66** (1.), **MAE score 2188** (2), **RMSE score 2879** (3), **RMSE score  2739** (4), **R2 score 0.68** (5)), which strongly indicates on more advanced feature engineering and model tuning. 
 
        
 4. Moreover, academic research papers were considered. From the visualizations, can be concluded that the same data set as the one used in this project was used, but we are not completely sure in that. Accordingly, it should be considered in the comparison of the results.
