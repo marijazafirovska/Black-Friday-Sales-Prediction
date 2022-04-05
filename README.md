@@ -186,24 +186,40 @@ The 2 newly developed features appear with high correlation with the target vari
 
   - Similarly, same match of the picks is visible on the plots with the separated Product_Category_1 prediction, except for the subcategories with less data.
 
-3. Additionally, an online research was conducted in order to collect different ideas and to compare the results from the previously presented model. The research outcomes showed that none of the online found models treating the same issue, reached better results than the above presented final model with R2 score of 0.73, MAE 2.000 and RMSE 2.664 (i. **R2 score 0.66**, ii. **MAE score 2188**, iii. **RMSE score 2879**, iv. **RMSE score  2739**, v. **R2 score 0.68**), which strongly indicates on more advanced feature engineering and model tuning. 
+3. Additionally, an online research was conducted (Github, Kaggle and Medium) in order to collect different ideas and to compare the results from the previously presented model. The research outcomes showed that none of the online found models treating the same issue, reached better results than the above presented final model with R2 score of 0.73, MAE 1.932 and RMSE 2.599 ( **R2 score 0.66** (1.), **MAE score 2188** (2), **RMSE score 2879** (3), **RMSE score  2739** (4), **R2 score 0.68** (5)), which strongly indicates on more advanced feature engineering and model tuning. 
 
-    1. https://github.com/nanthasnk/Black-Friday-Sales-Prediction/blob/master/Black%20Friday%20Sales%20Prediction.ipynb
+       
+4. Moreover, academic research papers were considered. From the visualizations, can be concluded that the same data set as the one used in this project was used, but we are not completely sure in that. Accordingly, it should be considered in the comparison of the results.
 
-    2. https://www.kaggle.com/code/ishanvardhan/black-friday-sales-analysis-and-prediction/notebook
+According to the **first article** (Trung, Thien Luu and Huynh, 2019), implementation of **extreme gradient boosted trees algorithm**, further improved by a proper combination of model hyper parameters tuning and feature engineering was proposed. The best result in terms of **RMSE** received with their algorithm is **2405**.
 
-    3. https://github.com/nanthasnk/Black-Friday-Sales-Prediction
+**Reddy and Srayani** (2020) in their paper proposed **Random Forest regressor algorithm**, with which they reached minimum **RMSE** (Root Mean Squared Error) value of **2829** on their Black Friday sales dataset.
 
-    4. https://medium.com/analytics-vidhya/sales-prediction-on-black-friday-using-ml-regression-technique-380af62c181e
+Simiary to the previous study, **Aher, Rjeswari and Vispute** (2021) in their research paper tested the following models, Linear Regression, Lasso Regression, Ridge Regression, Decision Tree Regressor, and Random Forest Regressor, but the best results were reached with **Random Forest Regressor**. The evaluation measure used is Mean Squared Error (**MSE**), and it is **3063**.
 
-    5. https://github.com/EagleDangar/BlackFriday-prediction/blob/master/blackfriday-insights-and-prediction.ipynb
-
-
+      
 ## Limitation of the model
 
 For development of the model, only data from the month before Black Friday was provided. However, it is considered that it would be more relevant if the model was trained with historical data from the previous years’ Black Fridays. Оne of the reasons for the previous is the fact that usually, buyers in the period before Black Friday refrain from buying products for which they expect promotions during Black Friday.
 
 Additionally, the analysis showed that the correlation between the demographic features of the clients and the target variable is very low. On the other hand, their product category preferences had high correlation with the target variable. Consequently, the used data set (only from one month) had limited learning possibilities. 
 
+## References
+
+   1. https://github.com/nanthasnk/Black-Friday-Sales-Prediction/blob/master/Black%20Friday%20Sales%20Prediction.ipynb
+
+   2. https://www.kaggle.com/code/ishanvardhan/black-friday-sales-analysis-and-prediction/notebook
+
+   3. https://github.com/nanthasnk/Black-Friday-Sales-Prediction
+
+   4. https://medium.com/analytics-vidhya/sales-prediction-on-black-friday-using-ml-regression-technique-380af62c181e
+
+   5. https://github.com/EagleDangar/BlackFriday-prediction/blob/master/blackfriday-insights-and-prediction.ipynb
+
+   6. Trung, N.D., Thien, T.D., Luu, T.D. and Huynh, H.X., BLACK FRIDAY SALE PREDICTION VIA EXTREME GRADIENT BOOSTED TREES, 2019.
+
+   7. Reddy, P.R. and Sravani, K., 2020. Black Friday Sales Prediction and Analysis. Think India Journal, 22(41), pp.59-64.
+    
+   8. Aher, A., Rajeswari, K. and Vispute, S., Data Analysis and Price Prediction of Black Friday Sales using Machine Learning Techniques, International Journal of      Engineering Research & Technology (IJERT) Published by : www.ijert.org Vol. 10 Issue 07, July-2021
 
 
